@@ -17,18 +17,25 @@ namespace take_the_safari_online.Controllers
         {
             this.db = new SafariVacation2Context();
         }
+
+        // GET api/animals
         [HttpGet]
         public ActionResult<IEnumerable<SeenAnimals>> Get()
         {
             return this.db.SeenAnimals;
         }
+
+        // TODO #2?
+        // Get api/animals/{location}
+
+        // POST api/animals/{species}
         [HttpPost]
         public ActionResult<SeenAnimals> Post([FromBody] string species)
         {
             var animal = new SeenAnimals
             {
                 Species = species,
-                // LocationOfLastSeen = "Africa",
+                LocationOfLastSeen = "Africa",
                 CountOfTimesSeen = 1,
             };
 
@@ -37,14 +44,18 @@ namespace take_the_safari_online.Controllers
             return animal;
         }
 
+        // PUT api/animals/{species}
         [HttpPut("{species}")]
-        public ActionResult<SeenAnimals> Put(string species)
+        public ActionResult<SeenAnimals> Put(string species, [FromBody] string location)
         {
             var updateToAnimal = this.db.SeenAnimals.FirstOrDefault(f => f.Species == species);
             updateToAnimal.CountOfTimesSeen = updateToAnimal.CountOfTimesSeen + 1;
+            updateToAnimal.LocationOfLastSeen = location;
             this.db.SaveChanges();
             return updateToAnimal;
         }
+
+        // DELETE api/animals/{species}
         [HttpDelete("{species}")]
         public ActionResult<SeenAnimals> Delete(string species)
         {
