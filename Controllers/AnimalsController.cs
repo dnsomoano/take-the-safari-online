@@ -18,6 +18,11 @@ namespace take_the_safari_online.Controllers
             this.db = new SafariVacation2Context();
         }
 
+        public class ResponseObject
+        {
+            public bool WasSuccessful { get; set; }
+            public Object result { get; set; }
+        }
         // GET api/animals
         [HttpGet]
         public ActionResult<IEnumerable<SeenAnimals>> Get()
@@ -25,8 +30,17 @@ namespace take_the_safari_online.Controllers
             return this.db.SeenAnimals;
         }
 
-        // TODO #2?
         // Get api/animals/{location}
+        [HttpGet("{location}")]
+        public ActionResult<ResponseObject> GetByLocation(string location)
+        {
+            var _rv = new ResponseObject
+            {
+                WasSuccessful = true,
+                result = this.db.SeenAnimals.Where(f => f.LocationOfLastSeen == location),
+            };
+            return _rv;
+        }
 
         // POST api/animals/{species}
         [HttpPost]

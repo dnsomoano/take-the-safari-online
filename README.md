@@ -15,11 +15,11 @@ You are tasked with taking the Safari DB you created and putting that into an AP
 
 ### Explorer Mode
 
-* [ ] Create the following endpoints: 
+* [X] Create the following endpoints: 
     - [x] Create `GET /Animals` Endpoint that returns all animals you have seen
-    - [ ] Create `GET /Search?species=lion` that returns all animals where the species name contains the title parameter
+    - [X] Create `GET /Search?species=lion` that returns all animals where the species name contains the title parameter
     - [x] Create a `POST /Animal` endpoints that adds an animal to the database. This should take a JSON body
-    - [ ] Create a `GET /Animal/{location}` that returns animals of only that location
+    - [X] Create a `GET /Animal/{location}` that returns animals of only that location
     - [X] Create a `PUT /Animal/{animal}` endpoint that adds 1 to that animal
     - [X] Create a `DELETE /Animal/{animal}` endpoint that deletes that animal from the database
  
