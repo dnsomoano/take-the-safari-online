@@ -1,0 +1,14 @@
+C:\Users\Dan\sdg\unit-3\take-the-safari-online\bin\Debug\netcoreapp2.1\take-the-safari-online.deps.json
+C:\Users\Dan\sdg\unit-3\take-the-safari-online\bin\Debug\netcoreapp2.1\take-the-safari-online.runtimeconfig.json
+C:\Users\Dan\sdg\unit-3\take-the-safari-online\bin\Debug\netcoreapp2.1\take-the-safari-online.runtimeconfig.dev.json
+C:\Users\Dan\sdg\unit-3\take-the-safari-online\bin\Debug\netcoreapp2.1\take-the-safari-online.dll
+C:\Users\Dan\sdg\unit-3\take-the-safari-online\bin\Debug\netcoreapp2.1\take-the-safari-online.pdb
+C:\Users\Dan\sdg\unit-3\take-the-safari-online\obj\Debug\netcoreapp2.1\take-the-safari-online.csprojAssemblyReference.cache
+C:\Users\Dan\sdg\unit-3\take-the-safari-online\obj\Debug\netcoreapp2.1\take-the-safari-online.csproj.CoreCompileInputs.cache
+C:\Users\Dan\sdg\unit-3\take-the-safari-online\obj\Debug\netcoreapp2.1\take-the-safari-online.RazorAssemblyInfo.cache
+C:\Users\Dan\sdg\unit-3\take-the-safari-online\obj\Debug\netcoreapp2.1\take-the-safari-online.RazorAssemblyInfo.cs
+C:\Users\Dan\sdg\unit-3\take-the-safari-online\obj\Debug\netcoreapp2.1\take-the-safari-online.AssemblyInfoInputs.cache
+C:\Users\Dan\sdg\unit-3\take-the-safari-online\obj\Debug\netcoreapp2.1\take-the-safari-online.AssemblyInfo.cs
+C:\Users\Dan\sdg\unit-3\take-the-safari-online\obj\Debug\netcoreapp2.1\take-the-safari-online.RazorTargetAssemblyInfo.cache
+C:\Users\Dan\sdg\unit-3\take-the-safari-online\obj\Debug\netcoreapp2.1\take-the-safari-online.dll
+C:\Users\Dan\sdg\unit-3\take-the-safari-online\obj\Debug\netcoreapp2.1\take-the-safari-online.pdb
