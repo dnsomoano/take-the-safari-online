@@ -11,7 +11,7 @@ namespace take_the_safari_online.Controllers
     [ApiController]
     public class SearchController : ControllerBase
     {
-        // Class dealing with db declaration for easier referencing
+        // Nested Classes dealing with db declaration for easier referencing
         private SafariVacation2Context db { get; set; }
 
         public SearchController()
@@ -19,20 +19,39 @@ namespace take_the_safari_online.Controllers
             this.db = new SafariVacation2Context();
         }
 
-        // TODO #1
-        // Get request using search instead of animals, querying by species
-        // GET api/Search?species={species}
-        [HttpGet("?species={species}")]
-        public ActionResult<SeenAnimals> Get(string species)
+        // Container class
+        public class ResponseObject
         {
-            var location = "";
-            var result = new SeenAnimals {
-                Species = species,
-                LocationOfLastSeen = location,
+            public bool WasSuccessful { get; set; }
+            public Object result { get; set; }
+        }
+
+        // GET api/Search?species={species}
+        [HttpGet]
+        public ActionResult<ResponseObject> Get([FromQuery] string species)
+        {
+            // var location = "";
+            // var result = new SeenAnimals {
+            //     Species = species,
+            //     LocationOfLastSeen = location,
+            // };
+            // result = this.db.SeenAnimals.FirstOrDefault(f => f.Species == species);
+            // return result;
+            var _rv = new ResponseObject
+            {
+                WasSuccessful = true,
+                result = this.db.SeenAnimals.FirstOrDefault(f => f.Species == species),
             };
-            // var timeSeen;
-            result = this.db.SeenAnimals.FirstOrDefault(f => f.Species == species);
-            return result;
+            if (species != null)
+            {
+                return _rv;
+            }
+            else
+            {
+                _rv.WasSuccessful = false;
+                _rv.result = "Animal not found";
+                return _rv;
+            }
         }
         // TODO #2
         // Get animal via by location using endpoint animals/{location}
